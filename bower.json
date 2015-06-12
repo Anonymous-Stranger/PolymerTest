@@ -1,0 +1,24 @@
+{
+  "name": "polymer-test",
+  "version": "0.0.0",
+  "authors": [
+    "Akash Gaonkar <akashgaonkar@gmail.com>"
+  ],
+  "description": "A test site using polymer",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~1.0.3",
+    "paper-toolbar": "PolymerElements/paper-toolbar#1.0.0",
+    "paper-header-panel": "PolymerElements/paper-header-panel#1.0.0",
+    "neon-animation": "PolymerElements/neon-animation#1.0.0",
+    "paper-button": "PolymerElements/paper-button#1.0.0"
+  }
+}

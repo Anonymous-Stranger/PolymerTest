@@ -1,0 +1,31 @@
+
+<link rel='import' href='../../bower_components/polymer/polymer.html'/>
+
+<dom-module id='page-link'>
+	
+	<template>
+		<content></content>
+	</template>
+
+	<script>
+		Polymer({
+			is: "page-link",
+			
+			properties: {
+				pageNum: {
+					type: String
+				}
+			},
+
+			listeners: {
+				'click': 'notifyPageModel'
+			},
+
+			notifyPageModel: function(evt) {
+				this.fire('page-model-page-changed', this.pageNum);
+			}
+
+		});
+	</script>
+
+</dom-module>

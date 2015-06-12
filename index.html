@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- author: Akash Gaonkar -->
+
+<html>
+	
+	<head>
+		<meta charset="utf-8"/>
+
+		<title>Hello Polymer!</title>
+
+
+		<!-- Polymer Web Components -->
+		<script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+
+		<!-- Polymer Elements -->
+		<link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html"/>
+		<link rel="import" href="bower_components/paper-button/paper-button.html"/>
+		<link rel="import" href="bower_components/neon-animation/neon-animatable.html"/>
+
+		<!-- Custom Elements -->
+		<link rel='import' href='elements/page-model/headed-page-model.html'/>
+		<link rel='import' href='elements/page-model/page-link.html'/>
+
+
+		<!-- Stylesheets -->
+		<link rel='stylesheet' href="css/common.css"/>
+
+	</head>
+
+	<body class="fullbleed">
+		
+		<headed-page-model>
+			<paper-toolbar justify='around'>
+				<div> Hello Polymer! </div>
+				<page-link page-num="0"><paper-button>1</paper-button></page-link>
+				<page-link page-num="1"><paper-button>2</paper-button></page-link>
+				<page-link page-num="2"><paper-button>3</paper-button></page-link>
+			</paper-toolbar>
+			<neon-animatable id="page1" class='flex layout vertical center-center'><span>1</span></neon-animatable>
+			<neon-animatable id="page2" class='flex layout vertical center-center'><span>2</span></neon-animatable>
+			<neon-animatable id="page3" class='flex layout vertical center-center'><span>3</span></neon-animatable>
+		</headed-page-model>
+
+	</body>
+
+</html>
