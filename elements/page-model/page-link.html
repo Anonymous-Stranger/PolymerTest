@@ -1,6 +1,8 @@
 
 <link rel='import' href='../../bower_components/polymer/polymer.html'/>
 
+<link rel='import' href='page-link-behavior.html'/>
+
 <dom-module id='page-link'>
 	
 	<template>
@@ -10,21 +12,7 @@
 	<script>
 		Polymer({
 			is: "page-link",
-			
-			properties: {
-				pageNum: {
-					type: String
-				}
-			},
-
-			listeners: {
-				'click': 'notifyPageModel'
-			},
-
-			notifyPageModel: function(evt) {
-				this.fire('page-model-page-changed', this.pageNum);
-			}
-
+			behaviors: [PageModel.PageLinkBehavior]
 		});
 	</script>
 

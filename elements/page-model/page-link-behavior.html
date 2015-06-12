@@ -1,0 +1,22 @@
+
+<script>
+	
+	var PageModel = PageModel ? PageModel : {};
+
+	PageModel.PageLinkBehavior = {
+		properties: {
+			pageNum: {
+				type: String
+			}
+		},
+
+		listeners: {
+			'click': 'notifyPageModel'
+		},
+
+		notifyPageModel: function(evt) {
+			this.fire('page-model-page-changed', this.pageNum);
+		}
+	};
+
+</script>

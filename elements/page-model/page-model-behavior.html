@@ -1,0 +1,44 @@
+
+<script>
+	
+	var PageModel = PageModel ? PageModel : {};
+
+	PageModel.PageModelBehavior = {
+
+		properties: {
+			selected: {
+				type: String,
+				value: 0
+			},
+			entryAnimation: {
+				type: String,
+				value: "slide-from-right-animation"
+			},
+			exitAnimation: {
+				type: String,
+				value: "slide-left-animation"
+			}
+		},
+
+		listeners: {
+			'page-model-page-changed': 'pageChanged'
+		},
+
+		pageChanged: function(evt) {
+			if (this.selected == evt.detail) return;
+
+			if (evt.detail < this.selected) {
+				this.entryAnimation = "slide-from-left-animation";
+				this.exitAnimation = "slide-right-animation";
+			} else {
+				this.entryAnimation = "slide-from-right-animation";
+				this.exitAnimation = "slide-left-animation";
+			}
+
+			this.selected = evt.detail;
+			evt.stopPropagation();
+		}
+
+	};
+
+</script>

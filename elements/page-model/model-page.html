@@ -1,0 +1,17 @@
+
+<link rel='import' href="../../bower_components/polymer/polymer.html"/>
+
+<link rel='import' href='model-page-behavior.html'/>
+
+<dom-module id='model-page'>
+	<template class='fit'>
+		<content></content>
+	</template>
+
+	<script>
+	Polymer({
+		is: "model-page",
+		behaviors: [PageModel.ModelPageBehavior]
+	});
+	</script>
+</dom-module>

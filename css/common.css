@@ -1,8 +1,8 @@
-neon-animatable {
-  font-size: 40px; }
-  neon-animatable#page1 {
+model-page {
+  font-size: 20rem; }
+  model-page#page1 {
     background-color: #ff8888; }
-  neon-animatable#page2 {
+  model-page#page2 {
     background-color: #ffff88; }
-  neon-animatable#page3 {
+  model-page#page3 {
     background-color: #88ff88; }
